@@ -1,6 +1,7 @@
 #! /bin/bash -x
 declare -A AA
-
+declare -a BB
+b=0
 PartTimeHour=8
 echo "Welcome to Arithmetic Sorting"
 echo "Enter three values"
@@ -21,3 +22,8 @@ s=$(( a%b+c ))
 echo "(a%b+c)==$s"
 AA[4]=$s
 echo "The values in dictionary are: ${AA[*]}"
+for((i=1;i<=4;i++))
+do
+BB[((b++))]=${AA[$i]}
+done
+echo ${BB[*]}
