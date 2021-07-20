@@ -42,3 +42,17 @@ fi
 done
 done
 echo "Descending Order=${BB[*]}"
+de=0
+for ((j=0;j<4;j++))
+do
+for ((i=1;i<=3;i++))
+do
+if [ ${BB[i-1]} -gt ${BB[i]} ]
+then
+        de=${BB[i-1]}
+        BB[((i-1))]=${BB[i]}
+        BB[((i))]=$de
+fi
+done
+done
+echo "Ascending Order=${BB[*]}"
