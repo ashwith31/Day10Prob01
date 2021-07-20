@@ -13,3 +13,5 @@ q=$(( a*b+c ))
 echo "(a*b+c)==$q"
 r=$(( c+a/b ))
 echo "(c+a/b)==$r"
+s=$(( a%b+c ))
+echo "(a%b+c)==$s"
